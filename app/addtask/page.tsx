@@ -21,7 +21,7 @@ export default function AddTaskForm() {
       await axios.post("/api/task", { title, description });
       setTitle("");
       setDescription("");
-      router.push("/"); // redirect to home
+      router.push("/"); 
     } catch (error) {
       alert("Failed to add task!");
       console.error(error);
@@ -31,7 +31,7 @@ export default function AddTaskForm() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-white">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-linear-to-br from-purple-50 via-blue-50 to-white">
       {/* Go Back Button */}
       <Link href="/" className="absolute top-5 left-5">
         <button
@@ -39,7 +39,7 @@ export default function AddTaskForm() {
           className={`font-semibold px-4 py-2 rounded-2xl text-white shadow-md text-sm sm:text-base transition-all ${
             loading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
+              : "bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
           }`}
         >
           {loading ? "Loading..." : "← Go Back"}
@@ -88,7 +88,7 @@ export default function AddTaskForm() {
           className={`mt-4 w-full py-3 sm:py-4 rounded-xl text-white font-semibold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2 ${
             loading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
+              : "bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
           }`}
         >
           {loading && (
