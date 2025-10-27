@@ -9,7 +9,7 @@ interface Task {
   title: string;
   description: string;
   status: string;
-  createdAt:Date
+  createdAt: Date
 }
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     try {
       const res = await axios.get("/api/task");
       console.log(res);
-      
+
       const data = res.data.tasks.map((t: any) => ({ ...t, _id: t._id.toString() }));
       setTasks(data);
     } catch (err) {
@@ -70,6 +70,9 @@ export default function Home() {
         </Link>
       </div>
 
+      <Link href='/product'><div>
+        <button>click</button>
+      </div></Link>
       {/* Tasks Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {tasks.length === 0 ? (
