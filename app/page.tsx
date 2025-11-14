@@ -69,7 +69,6 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      
 
       {/* <Link href='/product'><div>
         <button>click</button>
